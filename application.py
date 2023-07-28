@@ -25,7 +25,8 @@ file.close()
 
 # print("model load end")
 
-app = Flask(__name__)
+application = Flask(__name__)
+app=application
 
 @app.route('/')
 def homePage():
@@ -73,4 +74,4 @@ def data():
     return redirect('https://www.sciencedirect.com/science/article/pii/S2352340920313202')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
